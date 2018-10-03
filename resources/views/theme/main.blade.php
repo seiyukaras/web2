@@ -5,7 +5,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <!-- Styles -->
-		<link  rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
+         <!--<link  rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">-->
 		<link  rel="stylesheet" href="{{asset('css/bootstrap-datetimepicker.min.css')}}" type="text/css">
 		<link  rel="stylesheet" href="{{asset('css/flaticon.css')}}" type="text/css">
         <link  rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
@@ -20,6 +21,7 @@
      <!-- JS -->
 <!-- jquery  -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
+<!-- j<script src="{{asset('js/app.js')}}"></script>-->
 <!-- bootstrap -->
  <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <!-- mega menu -->

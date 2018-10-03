@@ -55,13 +55,13 @@
                 <!-- menu logo -->
                 <ul class="menu-logo">
                   <li class="head-info">
-                    <a href="index.html"><img id="logo_img" src="images/logo.png" alt="logo"> </a>
+                    <a href="/"><img id="logo_img" src="images/logo.png" alt="logo"> </a>
                     <div class="head-info-content">
                       <div class="info-left pull-left">
                         <div class="time">
                           <h6>MON – SAT</h6>
-                          <p>Lunch: 11:30 – 2:00</p>
-                          <p>Evening: 6:30 – 10:00</p>
+                          <p>24 Hours</p>
+                          
                         </div>
                         <div class="time mt-20">
                           <h6>SUNDAY</h6>
@@ -91,12 +91,12 @@
                 <ul class="menu-links">
                   <!-- active class -->
                   <li>
-                    <a class="active" href="javascript:void(0)"> Home <i class="fa fa-angle-down fa-indicator"></i></a>
+                    <a class="active" href="/"> Home <i class="fa fa-angle-down fa-indicator"></i></a>
                     <!-- drop down multilevel  -->
                     </li>
            
                   <li>
-                    <a href="menu-style-1.html"> Menu <i class="fa fa-angle-down fa-indicator"></i> </a>
+                    <a href="/menu"> Menu <i class="fa fa-angle-down fa-indicator"></i> </a>
                     <!-- drop down multilevel  -->
                    
                   </li>
@@ -144,13 +144,14 @@
                   </div>
                 </li>
                 <li>
-                  <li><a href="reservation-form.html"> Reservation <i class="fa fa-angle-down fa-indicator"></i> </a>
+                  <li><a href="reservation"> Reservation <i class="fa fa-angle-down fa-indicator"></i> </a>
                   <!-- drop down multilevel  -->
                 
                 </li>
-                <li><a href="blog-right-sidebar.html">blog <i class="fa fa-angle-down fa-indicator"></i></a>
+                <li><a href="/blog">blog <i class="fa fa-angle-down fa-indicator"></i></a>
+                 <!--  <li><a href="/gallery">Gallery <i class="fa fa-angle-down fa-indicator"></i></a>-->
                 <!-- drop down multilevel  -->
-                           <li><a href="contact.html"> Contact us</a></li>
+                           <li><a href="/contact"> Contact us</a></li>
           </ul>
         </div>
        </div>

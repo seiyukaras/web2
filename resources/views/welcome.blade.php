@@ -1781,7 +1781,7 @@ reservation form  -->
 
 <!--=================================
 testimonials -->
-
+<!--
 <section class="testimonials">
   <div class="object-bottom-top">
     <div class="object-right">
@@ -1842,7 +1842,7 @@ testimonials -->
     </div>
   </div>
 </section>
-
+-->
 <!--=================================
 testimonials -->
 

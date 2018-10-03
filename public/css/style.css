@@ -805,7 +805,7 @@ table tr td a { color: #e93e21; }
 
 /*menu default*/
 .menu-body { text-align: center; }
-.menu-body .menu-thumbnail img { width: 100px; height: 100%; }
+.menu-body .menu-thumbnail img { width: 100px; }
 .menu-body .menu-thumbnail { margin-bottom: 25px; }
 .menu-body .menu-title { margin-bottom: 20px; }
 .menu-body .menu-title h4 { color: #fff; }
