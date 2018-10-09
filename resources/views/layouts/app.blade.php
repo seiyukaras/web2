@@ -7,69 +7,66 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <!-- Styles -->
+        <link  rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
+         <!--<link  rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">-->
+        <link  rel="stylesheet" href="{{asset('css/bootstrap-datetimepicker.min.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/flaticon.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/owl.carousel.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/responsive.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/book/component.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/magnific-popup/magnific-popup.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('css/mega-menu/mega_menu.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('revolution/css/navigation.css')}}" type="text/css">
+        <link  rel="stylesheet" href="{{asset('revolution/css/settings.css')}}" type="text/css">
+     <!-- JS -->
+<!-- jquery  -->
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<!-- j<script src="{{asset('js/app.js')}}"></script>-->
+<!-- bootstrap -->
+ <script src="{{asset('js/bootstrap.min.js')}}"></script>
+<!-- mega menu -->
+<script src="{{asset('js/mega-menu/mega_menu.js')}}"></script>
+<!-- owl carousel -->
+<script src="{{asset('js/owl.carousel.min.js')}}"></script>
+<!-- appear -->
+<script src="{{asset('js/jquery.appear.js')}}"></script>
+<!-- counter -->
+<script src="{{asset('js/counter/jquery.countTo.js')}}"></script>
+<!-- datepicker -->
+<script src="{{asset('js/datepicker/bootstrap-datetimepicker.min.js')}}"></script>
+<!-- open menu -->
+<script src="{{asset('js/book/modernizr.custom.js')}}"></script>
+<script src="{{asset('js/book/bookblock.min.js')}}"></script>
+<!-- nicescroll -->
+<script src="{{asset('js/jquery.nicescroll.min.js')}}"></script>
+<!-- select -->
+<script src="{{asset('js/jquery-select.js')}}"></script>
+<!-- REVOLUTION JS FILES -->
+<script src="{{asset('revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+<script src="{{asset('revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+(Load Extensions only on Local File Systems !
+The following part can be removed on Server for On Demand Loading) -->
+<script src="{{asset('revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+<script src="{{asset('revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+<script src="{{asset('revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+<script src="{{asset('revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+<script src="{{asset('revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+<script src="{{asset('revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+<script src="{{asset('revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+<script src="{{asset('revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+<script src="{{asset('revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
+<!-- SLIDER REVOLUTION CUSTOM  -->
+<script src="{{asset('revolution/js/revolution-custom.js')}}"></script>
+<!-- custom -->
+<script src="{{asset('js/custom.js')}}"></script>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
         <main class="py-4">
             @yield('content')
         </main>

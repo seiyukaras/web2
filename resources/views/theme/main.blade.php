@@ -62,13 +62,23 @@ The following part can be removed on Server for On Demand Loading) -->
 <script src="{{asset('js/custom.js')}}"></script>
 </head>
     <body>
-		@include('theme.nav.nav')
+	   @include('theme.nav.nav')
 		
        @yield('content')
 	   
 	   @include('theme.footer.footer')
-		
-       @yield('footer')
 	  
 	</body>
+<script type="text/javascript">
+    $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+
+    $('#timepicker').datetimepicker({
+        pickDate: false,
+        pickSeconds: false
+    });
+
+    $('#datepickersearch').datetimepicker({
+        pickTime: false,
+    });
+</script>
 </html>

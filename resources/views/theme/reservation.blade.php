@@ -23,7 +23,8 @@
 
 <!--=================================
  reservation -->
-
+<form class="form-horizontal" action="{{ action('ReservaController@createReserva') }}" method="post">
+@csrf
 <section class="reservation">
  <div class="page-section-ptb">
   <div class="container">
@@ -40,25 +41,39 @@
    </div>
    <div class="row">
     <div class="col-lg-10  col-lg-offset-1">
-      <form class="form-horizontal" id="contactform">
          <div class="contact-form">
             <div class="row">
               <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="form-field">
                 <i class="fa fa-pencil"></i>
-            <input class="web placeholder" type="text" placeholder="Full Name" name="web">
+                <input class="web placeholder{{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" placeholder="Nombre..." name="name" required>
+              @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
           </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="form-field">
                 <i class="fa fa-phone"></i>
-            <input class="web placeholder" type="text" placeholder="Phone Number" name="web">
+                <input class="web placeholder{{ $errors->has('phone') ? ' is-invalid' : '' }}" type="text" placeholder="Teléfono..." name="phone" required>
+              @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
           </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="form-field">
                 <i class="fa fa-envelope-o"></i>
-            <input class="web placeholder" type="text" placeholder="Your Email" name="web">
+                <input class="web placeholder{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" placeholder="Correo..." name="email" required>
+              @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
           </div>
               </div>
             </div>
@@ -66,53 +81,52 @@
               <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="form-field" id="datepicker">
                 <i class="fa fa-calendar add-on"></i>
-            <input data-format="yyyy-MM-dd" type="text" placeholder="Select date">
+                <input data-format="yyyy/MM/dd" type="text" placeholder="Seleccione el Día..." class="web placeholder{{ $errors->has('dia') ? ' is-invalid' : '' }}" name="dia" required>
+              @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('dia') }}</strong>
+                                    </span>
+                                @endif
           </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="form-field" id="timepicker">
                 <i class="fa fa-clock-o icon-time add-on"></i>
-            <input data-format="hh:mm:ss" type="text" placeholder="Select time">
+                <input data-format="hh:mm:ss" type="text" placeholder="Seleccione la Hora..." class="web placeholder{{ $errors->has('hora') ? ' is-invalid' : '' }}" name="hora" required>
+              @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('hora') }}</strong>
+                                    </span>
+                                @endif
           </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="form-field">
-            <div class="selected-box">
-                   <select>
-                      <option value="Person">Person</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="2">More then 2</option>
-                </select>
-                  </div>
+                  <i class="fa fa-user"></i>
+                  <input class="web placeholder{{ $errors->has('personas') ? ' is-invalid' : '' }}" type="text" placeholder="Cantidad de Personas..." name="personas" required>
+              @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('personas') }}</strong>
+                                    </span>
+                                @endif
                  </div>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-12">
-              <div class="form-field">
-               <i class="fa fa-pencil"></i>
-                <textarea class="input-message placeholder" placeholder="Comment*" rows="7" name="message"></textarea>  
-              </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
               <div class="form-submit mt-10 mb-30 text-center">
-                 
-                 <button id="submit" name="Submit" type="submit" onclick="return false;" class="button uppercase"> Book A Table</button>
+                 <button class="button uppercase" type="submit">Reservar una mesa</button>
               </div>
               </div>
             </div>
             <div class="bottom-text text-center">You can also call : + <span class="text-orange"><strong> (+53) 22669336</strong></span> to make a reservation.</div>
             </div> 
-         </form>
       </div>
    </div>
   </div>
  </div>
 </section>
-
+</form>
 <!--=================================
  reservation --> 
 @endsection

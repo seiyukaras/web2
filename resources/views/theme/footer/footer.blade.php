@@ -2,20 +2,20 @@
 <!--=================================
 footer 2 -->
 
-<footer class="footer" style="background-image: url(images/bg/01.jpg);">
+<footer class="footer" style="background-image: url(/images/bg/01.jpg);">
   <div class="object-bottom">
     <div class="object-left">
-      <img class="img-responsive bottom" src="images/object/06.png" alt="">
+      <img class="img-responsive bottom" src="/images/object/06.png" alt="">
     </div>
     <div class="object-right">
-      <img  class="img-responsive bottom" src="images/object/16.png" alt="">
+      <img  class="img-responsive bottom" src="/images/object/16.png" alt="">
     </div>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 text-center mt-60">
         <div class="footer-logo">
-          <img id="logo-footer" class="img-responive" src="images/logo.png" alt="">
+          <img id="logo-footer" class="img-responive" src="/images/logo.png" alt="">
         </div>
         <div class="col-lg-8 col-lg-offset-2">
           <p class=" text-white mb-60">We provide you with daily self-made bread, sourdough pizza, roasted fish-meat-vegetables and many more. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>

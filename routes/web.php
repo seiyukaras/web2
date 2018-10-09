@@ -33,6 +33,14 @@ Route::get('/blog', function () {
 Route::get('/gallery', function () {
     return view('theme.gallery');
 });
+
+Route::post('createReserva', 'ReservaController@createReserva')->name('createReserva');
+Route::get('listReserva', 'ReservaController@listReserva')->name('listReserva')->middleware(['auth']);
+Route::put('confirmReserva/{reserva}', 'ReservaController@confirmReserva')->name('confirmReserva')->middleware(['auth']);
+Route::get('cancelarReserva/{reserva}', 'ReservaController@cancelarReserva')->name('cancelarReserva')->middleware(['auth']);
+Route::delete('cancelReserva/{reserva}', 'ReservaController@cancelReserva')->name('cancelReserva')->middleware(['auth']);
+Route::delete('delete/{reserva}', 'ReservaController@destroy')->name('destroy')->middleware(['auth']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

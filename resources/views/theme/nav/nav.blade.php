@@ -55,7 +55,7 @@
                 <!-- menu logo -->
                 <ul class="menu-logo">
                   <li class="head-info">
-                    <a href="/"><img id="logo_img" src="images/logo.png" alt="logo"> </a>
+                    <a href="/"><img id="logo_img" src="/images/logo.png" alt="logo"> </a>
                     <div class="head-info-content">
                       <div class="info-left pull-left">
                         <div class="time">
@@ -91,67 +91,46 @@
                 <ul class="menu-links">
                   <!-- active class -->
                   <li>
-                    <a class="active" href="/"> Home <i class="fa fa-angle-down fa-indicator"></i></a>
+                    <a class="active" href="/"> Home</a>
                     <!-- drop down multilevel  -->
                     </li>
            
                   <li>
-                    <a href="/menu"> Menu <i class="fa fa-angle-down fa-indicator"></i> </a>
+                    <a href="/menu"> Menu </a>
                     <!-- drop down multilevel  -->
                    
                   </li>
-                  <li><a href="javascript:void(0)">Servicios <i class="fa fa-angle-down fa-indicator"></i></a>
-                  <!-- drop down full width -->
-                  <div class="drop-down menu-bg grid-col-12">
-                    <!--grid row-->
-                    <div class="grid-row">
-                      <!--grid column 3-->
-                      <div class="grid-col-3">
-                        <ul>
-                          <li><a href="elements-button.html">button</a></li>
-                          <li><a href="elements-accordion.html">accordion</a></li>
-                          <li><a href="elements-tab.html">tab </a></li>
-                          <li><a href="elements-counter.html">counter</a></li>
-                          <li><a href="elements-carousel-slider.html">carousel slider</a></li>
-                          <li><a href="elements-team.html">Team</a></li>
-                          <li><a href="elements-pricing.html">pricing</a></li>
-                        </ul>
-                      </div>
-                      <!--grid column 3-->
-                      <div class="grid-col-3">
-                        <ul>
-                          <li><a href="elements-progress-bar.html">Progress Bar</a></li>
-                          <li><a href="elements-alerts-and-callouts.html">alerts and callouts</a></li>
-                          <li><a href="elements-blockquote.html">blockquote</a></li>
-                          <li><a href="elements-clients.html">Clients</a></li>
-                          <li><a href="elements-column.html">column</a></li>
-                          <li><a href="elements-list-style.html">Lists style</a></li>
-                          <li><a href="elements-feature-box.html"> feature box</a></li>
-                        </ul>
-                      </div>
-                      <!--grid column 3-->
-                      <div class="grid-col-3">
-                        <ul>
-                          <li><a href="elements-testimonial.html">Testimonials</a></li>
-                          <li><a href="elements-page-title-center.html">page title center</a></li>
-                          <li><a href="elements-page-title-left.html">page title left</a></li>
-                          <li><a href="elements-page-title-right.html">page title right</a></li>
-                          <li><a href="elements-page-title-fixed.html">page fixed</a></li>
-                          <li><a href="elements-page-title-parallax.html">page Parallax</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
                 <li>
-                  <li><a href="reservation"> Reservation <i class="fa fa-angle-down fa-indicator"></i> </a>
+                  <li><a href="reservation"> Reservar</a>
                   <!-- drop down multilevel  -->
                 
                 </li>
-                <li><a href="/blog">blog <i class="fa fa-angle-down fa-indicator"></i></a>
+                <li><a href="/blog">blog </a>
                  <!--  <li><a href="/gallery">Gallery <i class="fa fa-angle-down fa-indicator"></i></a>-->
                 <!-- drop down multilevel  -->
                            <li><a href="/contact"> Contact us</a></li>
+                @guest
+
+                @else
+                    <li><a href="{{ route('listReserva') }}"> Reservaciones</a></li>
+                    <li>
+                        <a href="javascript:void(0)"> {{ Auth::user()->name }} <i class="fa fa-angle-down fa-indicator"></i></a>
+
+                        <ul class="drop-down-multilevel">
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                  onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                                  Cerrar Sección
+                                </a>
+                            </li>
+                        </ul>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                @endguest
           </ul>
         </div>
        </div>
