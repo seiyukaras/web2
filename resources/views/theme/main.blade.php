@@ -41,6 +41,7 @@
 <script src="{{asset('js/jquery.nicescroll.min.js')}}"></script>
 <!-- select -->
 <script src="{{asset('js/jquery-select.js')}}"></script>
+<script src="{{asset('js/jasny-bootstrap.min.js')}}"></script>
 <!-- REVOLUTION JS FILES -->
 <script src="{{asset('revolution/js/jquery.themepunch.tools.min.js')}}"></script>
 <script src="{{asset('revolution/js/jquery.themepunch.revolution.min.js')}}"></script>

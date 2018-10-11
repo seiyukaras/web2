@@ -101,17 +101,18 @@
                    
                   </li>
                 <li>
-                  <li><a href="reservation"> Reservar</a>
+                  <li><a href="/reservation"> Reservar</a>
                   <!-- drop down multilevel  -->
                 
                 </li>
                 <li><a href="/blog">blog </a>
                  <!--  <li><a href="/gallery">Gallery <i class="fa fa-angle-down fa-indicator"></i></a>-->
                 <!-- drop down multilevel  -->
-                           <li><a href="/contact"> Contact us</a></li>
+                <li><a href="/contact"> Contact us</a></li>
                 @guest
 
                 @else
+                    <li><a href="{{ route('listBlog') }}"> Crear Blog</a></li>
                     <li><a href="{{ route('listReserva') }}"> Reservaciones</a></li>
                     <li>
                         <a href="javascript:void(0)"> {{ Auth::user()->name }} <i class="fa fa-angle-down fa-indicator"></i></a>
