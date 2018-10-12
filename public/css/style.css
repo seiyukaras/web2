@@ -1665,3 +1665,9 @@ cite { font-size: 14px; font-weight: 600; color: #e93e21; font-style: normal;}
         margin-top:50px
     }
 }
+.float-left {
+    float:left!important
+}
+.media-left,.media>.float-left {
+    padding:10px
+}

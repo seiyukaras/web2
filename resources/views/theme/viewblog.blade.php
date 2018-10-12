@@ -96,7 +96,12 @@
         @csrf
         <input type="hidden" name="comments_id" value="{{$comm->id}}"/>
         <input type="hidden" name="blog_id" value="{{$blog->id}}"/>
-    <div class="mb-50 col-md-12">
+    <div class="mb-50 col-md-12 media">
+                <a class="float-left" href="">
+                                        <div class="testimonial-avatar">
+                                            <img class="media-object" src="/images/user.png" alt="...">
+                                        </div>
+                                    </a>
                 <h4 class="media-heading">{{$comm->name}} <small>&#xB7; {{$comm->getDateDiferencia()}}</small></h4>
                 <h6 class="text-muted"></h6>
 
@@ -104,11 +109,13 @@
                   {{$comm->comentario}}
                 </p>
                 @if (Auth::check() && count($comm->replys) == 0)
-                <div class="media-footer text-right">
-                  <div class="contact-form">
+                <div class="text-right">
+                  <div class="contact-form" style="margin-left: 15%">
                   <div class="form-field">
                     <i class="fa fa-pencil"></i>
-                    <textarea class="input-message placeholder" placeholder="Responder Comentario*" rows="7" name="reply"></textarea>
+                    <textarea class="input-message placeholder" placeholder="Responder Comentario*" rows="7" name="reply" 
+                    style="background-size:0 100%,100% 100%;border:0;height:140px;font-size:14px;
+                          background-image:linear-gradient(0deg,#9c27b0 2px,rgba(156,39,176,0) 0),linear-gradient(0deg,#d2d2d2 1px,hsla(0,0%,82%,0) 0);"></textarea>
                   </div>
                   </div>
                   <button type="submit" class="button" rel="tooltip" title="Responder al Comentario" style="margin-right: 50px;">
@@ -116,7 +123,12 @@
                   </button>
                 </div>
                 @elseif (count($comm->replys) == 1)
-                    <div style="margin-left: 20%">
+                    <div class="media" style="margin-left: 15%">
+                    <a class="float-left" href="">
+                                        <div class="testimonial-avatar">
+                                            <img class="media-object" src="/images/logo.png" alt="...">
+                                        </div>
+                                    </a>
                     <h4 class="media-heading">M`ka <small>&#xB7; {{$comm->replys[0]->getDateDiferencia()}}</small></h4>
                     <p>
                         {{$comm->replys[0]->comentario}}
